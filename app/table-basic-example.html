@@ -1,0 +1,95 @@
+<div class="data" #tableWraper>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    class="mat-elevation-z8 table"
+    style="overflow-x:scroll;"
+  >
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container class="container" matColumnDef="position">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        No.
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">
+        {{element.position}}
+      </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container class="container" matColumnDef="name">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        Name
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container class="container" matColumnDef="weight">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        Weight
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">
+        {{element.weight}}
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container class="container" matColumnDef="symbol">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        Symbol
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">
+        {{element.symbol}}
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container class="container" matColumnDef="a">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        A
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">{{element.a}}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container class="container" matColumnDef="b">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        B
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">{{element.b}}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container class="container" matColumnDef="c">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        C
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">{{element.c}}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container class="container" matColumnDef="d">
+      <th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
+        D
+      </th>
+      <td mat-cell class="cell" *matCellDef="let element">{{element.d}}</td>
+    </ng-container>
+    <tr
+      mat-header-row
+      class="header-row"
+      *matHeaderRowDef="displayedColumns"
+    ></tr>
+    <tr
+      mat-row
+      class="row"
+      *matRowDef="let row; columns: displayedColumns;"
+    ></tr>
+  </table>
+</div>
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
