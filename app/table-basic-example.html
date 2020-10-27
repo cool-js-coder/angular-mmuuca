@@ -18,7 +18,7 @@
 			<th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
 				Name
 			</th>
-			<td mat-cell class="cell" *matCellDef="let element">{{element.name}}</td>
+			<td mat-cell class="cell"  [class.action-cell]="selectedCell?.cellIndex === 'name'" *matCellDef="let element">{{element.name}}</td>
 		</ng-container>
 
 		<!-- Weight Column -->
@@ -26,7 +26,8 @@
 			<th mat-header-cell #tableCell class="header-cell" *matHeaderCellDef>
 				Weight
 			</th>
-			<td mat-cell class="cell" *matCellDef="let element">
+			<td mat-cell class="cell" [class.action-cell]="selectedCell?.cellIndex === 'weight'"
+				*matCellDef="let element">
 				{{element.weight}}
 			</td>
 		</ng-container>
